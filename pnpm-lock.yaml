@@ -4,10 +4,12 @@ specifiers:
   '@types/node': ^18.11.18
   axios: ^1.2.2
   cheerio: 1.0.0-rc.12
+  toml: ^3.0.0
 
 dependencies:
   axios: 1.2.2
   cheerio: 1.0.0-rc.12
+  toml: 3.0.0
 
 devDependencies:
   '@types/node': 18.11.18
@@ -180,4 +182,8 @@ packages:
 
   /proxy-from-env/1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+    dev: false
+
+  /toml/3.0.0:
+    resolution: {integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==}
     dev: false
