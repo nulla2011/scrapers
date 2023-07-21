@@ -12,9 +12,6 @@ const MSG_API = 'https://discord.com/api/v9/channels/';
 const secr = fs.readFileSync('./discord.secr', 'utf-8');
 const { cookie, authorization } = toml.parse(secr) as unknown as secr;
 
-interface IObject {
-  [key: string]: any;
-}
 const getMsg = async ({ channelID, last }: Record<string, string>) => {
   let axiosres;
   try {
@@ -34,8 +31,8 @@ const getMsg = async ({ channelID, last }: Record<string, string>) => {
   return axiosres.data;
 };
 const main = async (channelID: string) => {
-  let db: IObject[] = [];
-  let msg = (await getMsg({ channelID, last: '0' })) as unknown as IObject[];
+  let db: Record<string, any>[] = [];
+  let msg = (await getMsg({ channelID, last: '0' })) as unknown as Record<string, any>[];
   console.log(`get ${msg.length} messages`);
   db = db.concat(msg);
   let last = msg.at(-1)?.id;
